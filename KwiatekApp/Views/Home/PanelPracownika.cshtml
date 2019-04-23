@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "PanelPracownika";
+}
+<header></header>
+<div class="container">
+    <div class="row">
+        <div class="border">
+            <div class="col-md-4" style="border:1px solid; border-radius:10px 0px 0px 10px; background-color:#DBD7B7; margin-top:20px;">
+                <h2>Podgląd parametrów</h2>
+                <div class="container">
+                    <ul>
+                        @foreach (var kontroler in ViewData["Controler"] as List<string>)
+                        {
+                            <li>@kontroler</li>
+                        }
+
+                    </ul>
+                    <div class="col-md-4">
+                        <input style="float:right;margin-right:50px; margin-bottom:10px" type="submit" name="answer" value="Więcej..." class="btn btn-success" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4" style="border-top:1px solid;border-bottom:1px solid; background-color:#DBD7B7; margin-top:20px;">
+            <div class="container">
+                <h2>Podgląd monitoringu</h2>
+                <ul>
+                    @foreach (var kamera in ViewData["Kamera"] as List<string>)
+                    {
+                        <li>@kamera</li>
+                    }
+                </ul>
+                <div class="col-md-4">
+                    <input style="float:right;margin-right:50px;  margin-bottom:10px" type="submit" name="answer" value="Więcej..." class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4" style="border:1px solid; border-radius:0px 10px 10px 0px; background-color:#DBD7B7; margin-top:20px;">
+            <div class="container">
+                <h2>Raporty czasowe</h2>
+                <ul>
+                    @foreach (var raport in ViewData["Raport"] as List<string>)
+                    {
+                        <li>@raport</li>
+                    }
+                </ul>
+                <div class="col-md-4">
+                    <input style="float:right;margin-right:50px;  margin-bottom:10px" type="submit" name="answer" value="Więcej..." class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-8" style="border-left:1px solid; border-top:1px solid;border-bottom:1px solid; border-radius:10px 0px 0px 10px; background-color:#DBD7B7; margin-top:20px;">
+            <div class="container">
+                <h2>Zarządzanie klientami</h2>
+                <ul>
+                    @foreach (var klient in ViewData["Klient"] as List<string>)
+                    {
+                        <li>@klient</li>
+                    }
+                </ul>
+                <div class="col-md-8">
+                    <input style="float:right;margin-right:50px;  margin-bottom:10px" type="submit" name="answer" value="Wybierz klienta" class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4" style="border:1px solid; border-radius:0px 10px 10px 0px; background-color:#DBD7B7; margin-top:20px;">
+            <div class="container">
+                <h2>Wystawianie faktur</h2>
+                <ul>
+                    @foreach (var faktura in ViewData["Faktura"] as List<string>)
+                    {
+                        <li>@faktura</li>
+                    }
+                </ul>
+                <div class="col-md-3">
+                    <input style="float:right;margin-right:50px;  margin-bottom:10px" type="submit" name="answer" value="Wystawianie faktur" class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

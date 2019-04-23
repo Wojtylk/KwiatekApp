@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "PanelAdministratora";
+}
+
+<header></header>
+<div class="container">
+    <div class="row">
+        <div class="border">
+            <div class="col-md-4" style="border:1px solid; border-radius:10px 0px 0px 10px; background-color:#DBD7B7; margin-top:20px;">
+                <h2>Zarządzanie cennikiem</h2>
+                <div class="container">
+                    <ul>
+                        @foreach (var cena in ViewData["Cena"] as List<string>)
+                        {
+                            <li>@cena</li>
+                        }
+
+                    </ul>
+                    <div class="col-md-4">
+                        <input style="float:right;margin-right:50px; margin-bottom:10px" type="submit" name="answer" value="Więcej..." class="btn btn-success" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4" style="border-top:1px solid;border-bottom:1px solid; background-color:#DBD7B7; margin-top:20px;">
+            <div class="container">
+                <h2>Zarządzanie klientami</h2>
+                <ul>
+                    @foreach (var klient in ViewData["Klient"] as List<string>)
+                    {
+                        <li>@klient</li>
+                    }
+                </ul>
+                <div class="col-md-4">
+                    <input style="float:right;margin-right:50px;  margin-bottom:10px" type="submit" name="answer" value="Więcej..." class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4" style="border:1px solid; border-radius:0px 10px 10px 0px; background-color:#DBD7B7; margin-top:20px;">
+            <div class="container">
+                <h2>Zarządzanie dostawami</h2>
+                <ul>
+                    @foreach (var dostawa in ViewData["Dostawa"] as List<string>)
+                    {
+                        <li>@dostawa</li>
+                    }
+                </ul>
+                <div class="col-md-4">
+                    <input style="float:right;margin-right:50px;  margin-bottom:10px" type="submit" name="answer" value="Więcej..." class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-8" style="border:1px solid; border-radius:10px; background-color:#DBD7B7; margin-top:20px;">
+            <div class="container">
+                <h2>Zmiana programu lojalnościowego</h2>
+                <ul>
+                    @foreach (var progam in ViewData["Program"] as List<string>)
+                    {
+                        <li>@progam</li>
+                    }
+                </ul>
+                <div class="col-md-8">
+                    <input style="float:right;margin-right:50px;  margin-bottom:10px" type="submit" name="answer" value="Więcej..." class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title — moja aplikacja platformy ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .nohover:hover, :focus {
+            color: #9d9d9d !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">PZ-StacjaPaliw</a>
+            </div>
+            <div style="float:right;" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+
+                    <li><a class="nohover"><p><b>Email:</b> mail@mail.com</p></a></li>
+                    <li><a class="nohover"><p><b>Imię:</b> Kamil</p></a></li>
+                    <li><a class="nohover"><p><b>Nazwisko:</b> Wojtylak</p></a></li>
+                    <li><a class="hover" asp-area="" asp-controller="Home" asp-action="Index">Wyloguj</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p><b>Kontakt</b></p>
+                            <p><b>tel:</b>730890368</p>
+                            <p><b>Adres:</b>ul. Ostatnia 12</p>
+                            <p><b>Miasto:</b>Kraków</p>
+                            <p><b>Kod pocztowy:</b>12-345</p>
+                        </div>
+                        <div class="col-md-offset-6">
+                        </div>
+                        <div style="float:right;" class="col-md-3">
+                            <p><b>Polityka Prywatności</b></p>
+                            <p>Nasza polityka prywatności</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </footer>
+        </div>
+
+        <environment include="Development">
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+        </environment>
+        <environment exclude="Development">
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+            </script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                    crossorigin="anonymous"
+                    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+            </script>
+            <script src="~/js/site.min.js" asp-append-version="true"></script>
+        </environment>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
