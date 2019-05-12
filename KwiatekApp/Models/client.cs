@@ -88,7 +88,7 @@ namespace KwiatekApp.Models
             }
             catch (MySqlException e)
             {
-
+                //MessageBox.Show(MessageString, "SQL Read Error");
 
             }
 
