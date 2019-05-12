@@ -1,4 +1,4 @@
-﻿using System;
+﻿using KwiatekApp.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +8,8 @@ namespace KwiatekApp.Controllers
 {
     public class HomeController : Controller
     {
+
+
         public ActionResult Index()
         {
             return View();
@@ -100,5 +102,54 @@ namespace KwiatekApp.Controllers
             return View();
         }
 
+
+        client mysql = new client(1);
+
+        public ActionResult AddClient()
+        {
+            return View(mysql);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
+        public ActionResult Create()
+        {
+            return View();
+        }
+        private ApplicationDbContext db = new ApplicationDbContext();
+        // POST: PersonalDetails/Create
+        // To protect from overposting attacks, please enable the specific
+        //properties you want to bind to, for
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include ="AutoId,FirstName,LastName,Age,Active")] PersonalDetail personalDetail)
+        {
+            if (ModelState.IsValid)
+            {
+                db.PersonalDetails.Add(personalDetail);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(personalDetail);
+        }
+    */
     }
 }
